@@ -1,0 +1,12 @@
+services:
+  backend:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+
+  frontend:
+    image: nginx:latest
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
